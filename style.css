@@ -547,3 +547,46 @@ svg {
 #elencoRisposte button:active {
   box-shadow: 0px 0px 4px 2px white;
 }
+/* Animazione finestra scelta */
+.scelta {
+  position: relative;
+  top: -500px;
+  animation: entrata 4s linear forwards;
+  opacity: 0;
+}
+@keyframes entrata {
+  50% {
+    rotate: 180deg;
+    opacity: 30%;
+  }
+  100% {
+    rotate: 360deg;
+    top: 0px;
+    opacity: 100%;
+  }
+}
+
+.uscita {
+  position: relative;
+  animation: uscita 4s linear forwards;
+  left: 0;
+}
+@keyframes uscita {
+  50% {
+    rotate: 180deg;
+  }
+  100% {
+    rotate: 360deg;
+    left: 1000px;
+  }
+}
+
+.welcomeEntrata {
+  opacity: 0;
+  animation: welcomeEntrata 6s linear forwards;
+}
+@keyframes welcomeEntrata {
+  100% {
+    opacity: 100%;
+  }
+}

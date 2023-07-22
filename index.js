@@ -447,8 +447,16 @@ const datiIniziali = () => {
   numDomande = parseInt(numDomande);
   const welcome = document.getElementById("welcome");
   const scelte = document.getElementById("scelte");
-  scelte.style.display = "none";
-  welcome.style.display = "block";
+  scelte.classList.remove("scelta");
+  scelte.classList.add("uscita");
+  setTimeout(() => {
+    scelte.style.display = "none";
+  }, 4000);
+  setTimeout(() => {
+    welcome.style.display = "block";
+    welcome.classList.add("welcomeEntrata");
+  }, 4000);
+  console.log(scelte);
 };
 
 const startButton = document.getElementById("startScelte");
